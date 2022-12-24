@@ -1,6 +1,6 @@
 import { CreateExampleDto } from '@modules/example/dto/create-example.dto';
 import { UpdateExampleDto } from '@modules/example/dto/update-example.dto';
-import { ExampleEntity } from '../entites/example.entity';
+import { ExampleEntity } from '../entities/example.entity';
 
 export interface IExampleRepository {
   create(data: CreateExampleDto): Promise<ExampleEntity>;

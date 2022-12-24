@@ -1,4 +1,4 @@
-import { ExampleEntity } from '@modules/example/domain/entites/example.entity';
+import { ExampleEntity } from '@modules/example/domain/entities/example.entity';
 import { CreateExampleDto } from '@modules/example/dto/create-example.dto';
 import { UpdateExampleDto } from '@modules/example/dto/update-example.dto';
 import { CreateExampleService } from '@modules/example/services/create-example.service';

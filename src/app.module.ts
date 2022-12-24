@@ -1,5 +1,5 @@
 import { connection } from '@configs/database/database.config';
-import { ExampleEntity } from '@modules/example/domain/entites/example.entity';
+import { ExampleEntity } from '@modules/example/domain/entities/example.entity';
 import { ExampleModule } from '@modules/example/example.module';
 import { MiddlewareConsumer, Module, RequestMethod } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';

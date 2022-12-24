@@ -1,4 +1,4 @@
-import { ExampleEntity } from '@modules/example/domain/entites/example.entity';
+import { ExampleEntity } from '@modules/example/domain/entities/example.entity';
 import { IExampleRepository } from '@modules/example/domain/repositories/example.repository';
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
