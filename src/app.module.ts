@@ -9,11 +9,11 @@ import { AppService } from './app.service';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      ...connection,
-      entities: [ExampleEntity],
-    }),
-    ExampleModule,
+    // TypeOrmModule.forRoot({
+    //   ...connection,
+    //   entities: [ExampleEntity],
+    // }),
+    // ExampleModule,
   ],
   controllers: [AppController],
   providers: [AppService],
