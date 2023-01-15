@@ -4,7 +4,8 @@ import { ExampleEntity } from '../entities/example.entity';
 
 export interface IExampleRepository {
   create(data: CreateExampleDto): Promise<ExampleEntity>;
-  update(id: number, data: UpdateExampleDto): Promise<ExampleEntity>;
+  update(data: UpdateExampleDto): Promise<ExampleEntity>;
   delete(id: number): Promise<void>;
   findAll(): Promise<ExampleEntity[]>;
+  findOneExample(where: object): Promise<ExampleEntity>;
 }

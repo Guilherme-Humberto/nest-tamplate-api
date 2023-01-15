@@ -14,7 +14,12 @@ export class UpdateExampleService {
     id: number,
     data: UpdateExampleDto,
   ): Promise<ExampleEntity> {
-    const response = await this.example.update(id, data);
-    return response;
+    const old = await this.example.findOneExample({ id });
+
+    if (!old) throw new NotFoundException('Example no found');
+
+    const newUser = Object.assign(old, data)
+
+    return await this.example.update(newUser);
   }
 }

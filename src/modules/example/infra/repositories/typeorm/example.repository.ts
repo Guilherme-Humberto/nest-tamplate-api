@@ -17,12 +17,9 @@ export class ExampleRepository implements IExampleRepository {
 
     return response;
   }
-  async update(id: number, data: ExampleEntity): Promise<ExampleEntity> {
-    const findIfExists = await this.repository.findOne({ where: { id } });
-
-    if (!findIfExists) throw new NotFoundException('Example no found');
-    const response = await this.repository.save(data);
-    return response;
+  async update(data: ExampleEntity): Promise<ExampleEntity> {
+    await this.repository.save(data);
+    return data;
   }
 
   async delete(id: number): Promise<void> {
@@ -31,5 +28,9 @@ export class ExampleRepository implements IExampleRepository {
 
   async findAll(): Promise<ExampleEntity[]> {
     return await this.repository.find();
+  }
+
+  async findOneExample(where: object): Promise<ExampleEntity> {
+    return await this.repository.finOne({ where });
   }
 }
